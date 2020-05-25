@@ -10,3 +10,6 @@ Grupo:
 - Thiago Rios
 
 ![Image description](https://media.discordapp.net/attachments/429019284799488011/711886219260198972/Diagrama.jpg?width=224&height=474)
+
+![Image description](blob:https://web.whatsapp.com/7708e50f-dba2-4e57-b566-dceb90b8de1f)
+
