@@ -13,4 +13,4 @@ Grupo:
 
 ![Image description](https://cdn.discordapp.com/attachments/429019284799488011/714427576956747796/7708e50f-dba2-4e57-b566-dceb90b8de1f.png)
 
-![Image description](![Image description](https://cdn.discordapp.com/attachments/429019284799488011/714427576956747796/7708e50f-dba2-4e57-b566-dceb90b8de1f.png)
+![Image description](https://cdn.discordapp.com/attachments/429019284799488011/714427576956747796/7708e50f-dba2-4e57-b566-dceb90b8de1f.png)
