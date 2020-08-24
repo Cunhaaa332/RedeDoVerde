@@ -20,9 +20,9 @@ C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\bin\De
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\bin\Debug\netcoreapp3.1\RedeDoVerde.CrossCutting.pdb
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\bin\Debug\netcoreapp3.1\RedeDoVerde.Domain.pdb
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\obj\Debug\netcoreapp3.1\RedeDoVerde.Repository.csprojAssemblyReference.cache
-C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\obj\Debug\netcoreapp3.1\RedeDoVerde.Repository.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\obj\Debug\netcoreapp3.1\RedeDoVerde.Repository.AssemblyInfoInputs.cache
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\obj\Debug\netcoreapp3.1\RedeDoVerde.Repository.AssemblyInfo.cs
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\obj\Debug\netcoreapp3.1\RedeDoVerde.Repository.csproj.CopyComplete
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\obj\Debug\netcoreapp3.1\RedeDoVerde.Repository.dll
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\obj\Debug\netcoreapp3.1\RedeDoVerde.Repository.pdb
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Repository\obj\Debug\netcoreapp3.1\RedeDoVerde.Repository.csproj.CoreCompileInputs.cache

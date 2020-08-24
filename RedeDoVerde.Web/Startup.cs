@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using RedeDoVerde.Domain.Account.Repository;
 using RedeDoVerde.Repository.Account;
 using RedeDoVerde.Services.Account;
+using RedeDoVerde.Repository.Context;
 
 namespace RedeDoVerde.Web
 {
@@ -32,16 +33,18 @@ namespace RedeDoVerde.Web
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddTransient<IAccountRepository, ApplicationDbContext>();
+            services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<IUserStore<Account>, AccountRepository>();
+            services.AddTransient<IRoleStore<Role>, RoleRepository>();
+            services.AddTransient<IAccountIdentityManager, AccountIdentityManager>();
             services.AddTransient<IAccountService, AccountService>();
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<RedeDoVerdeContext>(opt =>
+            {
+                opt.UseSqlServer(Configuration.GetConnectionString("RedeDoVerdeConnection"));
+            });
 
-
-            services.AddIdentity<Account, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+            services.AddIdentity<Account, Role>()
                 .AddDefaultTokenProviders();
 
             services.ConfigureApplicationCookie(options =>

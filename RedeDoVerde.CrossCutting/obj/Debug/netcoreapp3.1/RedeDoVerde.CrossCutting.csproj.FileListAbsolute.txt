@@ -9,7 +9,6 @@ C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde.CrossCutting\obj\Debug\netcor
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.CrossCutting\bin\Debug\netcoreapp3.1\RedeDoVerde.CrossCutting.deps.json
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.CrossCutting\bin\Debug\netcoreapp3.1\RedeDoVerde.CrossCutting.dll
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.CrossCutting\bin\Debug\netcoreapp3.1\RedeDoVerde.CrossCutting.pdb
-C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.CrossCutting\obj\Debug\netcoreapp3.1\RedeDoVerde.CrossCutting.csprojAssemblyReference.cache
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.CrossCutting\obj\Debug\netcoreapp3.1\RedeDoVerde.CrossCutting.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.CrossCutting\obj\Debug\netcoreapp3.1\RedeDoVerde.CrossCutting.AssemblyInfoInputs.cache
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.CrossCutting\obj\Debug\netcoreapp3.1\RedeDoVerde.CrossCutting.AssemblyInfo.cs
