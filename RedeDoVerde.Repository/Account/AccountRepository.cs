@@ -91,6 +91,21 @@ namespace RedeDoVerde.Repository.Account
                 .FirstOrDefault(x => x.Email == email && x.Password == password));
         }
 
+        public async Task<IdentityResult> CreateUser(string name, DateTime dtBirthday, string email, string password)
+        {
+            CancellationToken cancellationToken;
+            var user = new Domain.Account.Account
+            {
+                Name = name,
+                DtBirthday = dtBirthday,
+                Email = email,
+                Password = password
+            };
+            await CreateAsync(user, cancellationToken);
+            return IdentityResult.Success;
+        }
+
+
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls
 
@@ -125,6 +140,8 @@ namespace RedeDoVerde.Repository.Account
             // TODO: uncomment the following line if the finalizer is overridden above.
             // GC.SuppressFinalize(this);
         }
+
+
         #endregion
     }
 }

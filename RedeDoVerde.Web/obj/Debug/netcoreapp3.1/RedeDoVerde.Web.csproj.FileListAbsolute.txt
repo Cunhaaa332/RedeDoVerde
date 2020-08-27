@@ -345,3 +345,4 @@ C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\bin\Debug\net
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs

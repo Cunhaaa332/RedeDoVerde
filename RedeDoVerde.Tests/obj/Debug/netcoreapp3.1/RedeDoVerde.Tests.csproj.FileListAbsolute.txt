@@ -191,3 +191,4 @@ C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Tests\obj\Debug\n
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Tests\obj\Debug\netcoreapp3.1\RedeDoVerde.Tests.dll
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Tests\obj\Debug\netcoreapp3.1\RedeDoVerde.Tests.pdb
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Tests\obj\Debug\netcoreapp3.1\RedeDoVerde.Tests.genruntimeconfig.cache
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Tests\obj\Debug\netcoreapp3.1\RedeDoVerde.Tests.csprojAssemblyReference.cache
