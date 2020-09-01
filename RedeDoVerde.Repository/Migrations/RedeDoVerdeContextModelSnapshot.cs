@@ -69,11 +69,75 @@ namespace RedeDoVerde.Repository.Migrations
                     b.ToTable("Role");
                 });
 
+            modelBuilder.Entity("RedeDoVerde.Domain.Comment.Comment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("AccountId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("PostId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("RedeDoVerde.Domain.Post.Post", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("AccountId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePost")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
+
+                    b.ToTable("Posts");
+                });
+
             modelBuilder.Entity("RedeDoVerde.Domain.Account.Account", b =>
                 {
                     b.HasOne("RedeDoVerde.Domain.Account.Role", "Role")
                         .WithMany("Accounts")
                         .HasForeignKey("RoleId");
+                });
+
+            modelBuilder.Entity("RedeDoVerde.Domain.Comment.Comment", b =>
+                {
+                    b.HasOne("RedeDoVerde.Domain.Account.Account", "Account")
+                        .WithMany()
+                        .HasForeignKey("AccountId");
+
+                    b.HasOne("RedeDoVerde.Domain.Post.Post", "Post")
+                        .WithMany("Comments")
+                        .HasForeignKey("PostId");
+                });
+
+            modelBuilder.Entity("RedeDoVerde.Domain.Post.Post", b =>
+                {
+                    b.HasOne("RedeDoVerde.Domain.Account.Account", "Account")
+                        .WithMany()
+                        .HasForeignKey("AccountId");
                 });
 #pragma warning restore 612, 618
         }

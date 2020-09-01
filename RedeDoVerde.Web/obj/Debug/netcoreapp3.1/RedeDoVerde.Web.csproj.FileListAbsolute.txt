@@ -314,9 +314,6 @@ C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\bin\Debug\net
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\bin\Debug\netcoreapp3.1\RedeDoVerde.Domain.pdb
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\bin\Debug\netcoreapp3.1\RedeDoVerde.Repository.pdb
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.csprojAssemblyReference.cache
-C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.RazorAssemblyInfo.cache
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.RazorAssemblyInfo.cs
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.AssemblyInfoInputs.cache
@@ -346,3 +343,11 @@ C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\bin\Debug\net
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Create.cshtml.g.cs
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Edit.cshtml.g.cs
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Index.cshtml.g.cs
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Delete.cshtml.g.cs
