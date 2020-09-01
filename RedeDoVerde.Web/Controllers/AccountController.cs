@@ -66,14 +66,24 @@ namespace RedeDoVerde.Web.Controllers
         {
             try
             {
-                await _accountService.Register(model.Name, model.DtBirthday, model.Email, model.Password);
-                return Redirect("/");
+                if(ModelState.IsValid)
+                {
+                    await _accountService.Register(model.Name, model.DtBirthday, model.Email, model.Password);
+                    return Redirect("/");
+                }
+                return View(model);
             }
             catch 
             {
                 ModelState.AddModelError(string.Empty, "Ocorreu um erro, por favor tente mais tarde.");
                 return View(model);
             }
+        }
+
+        public IActionResult Logout()
+        {
+            _accountIdentityManager.Logout();
+            return Redirect("/Account/Login");
         }
     }
 }

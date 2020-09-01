@@ -99,7 +99,12 @@ namespace RedeDoVerde.Repository.Account
                 Name = name,
                 DtBirthday = dtBirthday,
                 Email = email,
-                Password = password
+                Password = password,
+                Role = new Domain.Account.Role
+                {
+                    Id = new Guid(),
+                    Name = "USUARIO",
+                }
             };
             await CreateAsync(user, cancellationToken);
             return IdentityResult.Success;

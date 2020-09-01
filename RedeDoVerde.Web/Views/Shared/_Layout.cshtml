@@ -11,9 +11,6 @@
     @if (this.User.Identity.IsAuthenticated)
     {
         <header>
-
-
-
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                 <div class="container">
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Rede Do Verde</a>
@@ -36,6 +33,7 @@
                              src="https://robohash.org/@(this.User.Claims.First(x => x.Type == System.Security.Claims.ClaimTypes.NameIdentifier).Value)?size=30x30&bgset=bg1"
                              />
                         @this.User.Identity.Name?.ToLower()
+                        <a asp-controller="Account" asp-action="Logout">Logout</a>
                     </span>
                 </div>
             </nav>
