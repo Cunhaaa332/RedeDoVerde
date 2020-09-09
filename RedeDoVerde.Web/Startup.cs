@@ -17,6 +17,7 @@ using RedeDoVerde.Domain.Account.Repository;
 using RedeDoVerde.Repository.Account;
 using RedeDoVerde.Services.Account;
 using RedeDoVerde.Repository.Context;
+using RedeDoVerde.Services.Authenticate;
 
 namespace RedeDoVerde.Web
 {
@@ -55,6 +56,11 @@ namespace RedeDoVerde.Web
                 options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
             });
 
+            services.AddSession(option => {
+                option.Cookie.Name = "Token";
+                option.Cookie.IsEssential = true;
+            });
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
@@ -77,6 +83,8 @@ namespace RedeDoVerde.Web
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseAuthentication();
             app.UseAuthorization();

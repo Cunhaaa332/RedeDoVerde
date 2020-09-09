@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using RedeDoVerde.Domain.Post;
 using RestSharp;
 
@@ -16,9 +17,15 @@ namespace RedeDoVerde.Web.Controllers
         public ActionResult Index()
         {
             var client = new RestClient();
+            var key = HttpContext.Session.GetString("Token");
+
+            string[] peloAmorDeDeusFunciona = key.Split(":");
+            string[] agrVai = peloAmorDeDeusFunciona[1].Split("\\"); 
+            string[] agrVaiPF = agrVai[0].Split("}"); 
+            string[] agrVaiPF2 = agrVaiPF[0].Split('"'); 
 
             var request = new RestRequest("https://localhost:44386/api/posts", DataFormat.Json);
-            var response = client.Get<List<Post>>(request);
+            var response = client.Get<List<Post>>(request.AddHeader("Authorization", "Bearer " + agrVaiPF2[1]));
 
             return View(response.Data);
         }

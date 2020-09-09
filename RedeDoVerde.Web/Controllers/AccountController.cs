@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.JsonWebTokens;
+using Newtonsoft.Json;
 using RedeDoVerde.Services.Account;
 using RedeDoVerde.Web.ViewModel.Account;
+using RestSharp;
+using RestSharp.Authenticators;
+using RestSharp.Serialization.Json;
 
 namespace RedeDoVerde.Web.Controllers
 {
@@ -45,7 +51,14 @@ namespace RedeDoVerde.Web.Controllers
                 if(!String.IsNullOrWhiteSpace(returnUrl))
                 {
                     return Redirect(returnUrl);
-                } 
+                }
+
+                var client = new RestClient();
+                var request = new RestRequest("https://localhost:44386/api/authenticate/token", DataFormat.Json);
+                request.AddJsonBody(model);
+                var response = client.Post<string>(request);
+                HttpContext.Session.SetString("Token", response.Data);
+
                 return Redirect("/");
             }
             catch 
@@ -82,6 +95,7 @@ namespace RedeDoVerde.Web.Controllers
 
         public IActionResult Logout()
         {
+            HttpContext.Session.Remove("Token");
             _accountIdentityManager.Logout();
             return Redirect("/Account/Login");
         }

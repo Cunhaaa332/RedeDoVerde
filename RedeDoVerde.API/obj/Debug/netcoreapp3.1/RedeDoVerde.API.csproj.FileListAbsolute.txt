@@ -218,5 +218,6 @@ C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.API\bin\Debug\net
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.API\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.API\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.API\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.API\obj\Debug\netcoreapp3.1\RedeDoVerde.API.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.API\obj\Debug\netcoreapp3.1\RedeDoVerde.API.MvcApplicationPartsAssemblyInfo.cache
