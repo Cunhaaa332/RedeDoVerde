@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,13 +21,8 @@ namespace RedeDoVerde.Web.Controllers
             var client = new RestClient();
             var key = HttpContext.Session.GetString("Token");
 
-            string[] peloAmorDeDeusFunciona = key.Split(":");
-            string[] agrVai = peloAmorDeDeusFunciona[1].Split("\\"); 
-            string[] agrVaiPF = agrVai[0].Split("}"); 
-            string[] agrVaiPF2 = agrVaiPF[0].Split('"'); 
-
             var request = new RestRequest("https://localhost:44386/api/posts", DataFormat.Json);
-            var response = client.Get<List<Post>>(request.AddHeader("Authorization", "Bearer " + agrVaiPF2[1]));
+            var response = client.Get<List<Post>>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
             return View(response.Data);
         }
@@ -54,8 +51,14 @@ namespace RedeDoVerde.Web.Controllers
                     var client = new RestClient();
                     var request = new RestRequest("https://localhost:44386/api/posts", DataFormat.Json);
                     request.AddJsonBody(model);
+                    var key = HttpContext.Session.GetString("Token");
 
-                    var response = client.Post<Post>(request);
+                    string value = KeyValue(key);
+                    var jwt = value;
+                    var handler = new JwtSecurityTokenHandler();
+                    var token = handler.ReadJwtToken(jwt);
+
+                    var response = client.Post<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
                     return Redirect("/");
                 }
@@ -119,5 +122,15 @@ namespace RedeDoVerde.Web.Controllers
                 return View();
             }
         }
+
+        public string KeyValue(string key) 
+        {
+            string[] peloAmorDeDeusFunciona = key.Split(":");
+            string[] agrVai = peloAmorDeDeusFunciona[1].Split("\\");
+            string[] agrVaiPF = agrVai[0].Split("}");
+            string[] agrVaiPF2 = agrVaiPF[0].Split('"');
+
+            return agrVaiPF2[1];
+        } 
     }
 }
