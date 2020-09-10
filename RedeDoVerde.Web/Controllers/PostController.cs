@@ -7,13 +7,23 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using RedeDoVerde.Domain.Account.Repository;
 using RedeDoVerde.Domain.Post;
+using RedeDoVerde.Repository.Account;
 using RestSharp;
 
 namespace RedeDoVerde.Web.Controllers
 {
     public class PostController : Controller
     {
+
+        private readonly IAccountRepository _accountRepository;
+
+        public PostController(IAccountRepository accountRepository)
+        {
+            _accountRepository = accountRepository;
+        }
+
 
         // GET: PostsController
         public ActionResult Index()
@@ -50,7 +60,6 @@ namespace RedeDoVerde.Web.Controllers
                 {
                     var client = new RestClient();
                     var request = new RestRequest("https://localhost:44386/api/posts", DataFormat.Json);
-                    request.AddJsonBody(model);
                     var key = HttpContext.Session.GetString("Token");
 
                     string value = KeyValue(key);
@@ -58,6 +67,13 @@ namespace RedeDoVerde.Web.Controllers
                     var handler = new JwtSecurityTokenHandler();
                     var token = handler.ReadJwtToken(jwt);
 
+                    CancellationToken cancellationToken;
+
+                    var account = _accountRepository.FindByIdAsync(token.Subject, cancellationToken);
+
+                    model.Account = account.Result;
+
+                    request.AddJsonBody(model);
                     var response = client.Post<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
                     return Redirect("/");

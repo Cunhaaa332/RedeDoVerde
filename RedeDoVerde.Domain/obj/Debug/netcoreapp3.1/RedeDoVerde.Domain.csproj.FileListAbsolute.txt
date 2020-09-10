@@ -14,3 +14,4 @@ C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Domain\obj\Debug\
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Domain\obj\Debug\netcoreapp3.1\RedeDoVerde.Domain.AssemblyInfo.cs
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Domain\obj\Debug\netcoreapp3.1\RedeDoVerde.Domain.dll
 C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Domain\obj\Debug\netcoreapp3.1\RedeDoVerde.Domain.pdb
+C:\Users\user\source\repos\RedeDoVerde\RedeDoVerde\RedeDoVerde.Domain\obj\Debug\netcoreapp3.1\RedeDoVerde.Domain.csprojAssemblyReference.cache

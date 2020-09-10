@@ -48,16 +48,16 @@ namespace RedeDoVerde.Web.Controllers
                     return View(model);
                 }
 
-                if(!String.IsNullOrWhiteSpace(returnUrl))
-                {
-                    return Redirect(returnUrl);
-                }
-
                 var client = new RestClient();
                 var request = new RestRequest("https://localhost:44386/api/authenticate/token", DataFormat.Json);
                 request.AddJsonBody(model);
                 var response = client.Post<string>(request);
                 HttpContext.Session.SetString("Token", response.Data);
+
+                if (!String.IsNullOrWhiteSpace(returnUrl))
+                {
+                    return Redirect(returnUrl);
+                }
 
                 return Redirect("/");
             }
@@ -95,8 +95,11 @@ namespace RedeDoVerde.Web.Controllers
 
         public IActionResult Logout()
         {
-            HttpContext.Session.Remove("Token");
             _accountIdentityManager.Logout();
+                foreach (var cookie in HttpContext.Request.Cookies)
+                {
+                    Response.Cookies.Delete(cookie.Key);
+                }
             return Redirect("/Account/Login");
         }
     }

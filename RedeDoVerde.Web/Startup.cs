@@ -59,6 +59,7 @@ namespace RedeDoVerde.Web
             services.AddSession(option => {
                 option.Cookie.Name = "Token";
                 option.Cookie.IsEssential = true;
+                option.IOTimeout = TimeSpan.FromMinutes(60);
             });
 
             services.AddControllersWithViews();

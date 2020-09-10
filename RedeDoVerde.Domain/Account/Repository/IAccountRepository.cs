@@ -11,5 +11,6 @@ namespace RedeDoVerde.Domain.Account.Repository
     {
         Task<Account> GetAccountByEmailPassword(string email, string password);
         Task<IdentityResult> CreateUser(string name, DateTime dtBirthday, string email, string password);
+        Task<Account> FindByIdAsync(string userId, CancellationToken cancellationToken);
     }
 }
