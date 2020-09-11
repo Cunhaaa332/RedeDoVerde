@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RedeDoVerde.Repository.Context;
 
 namespace RedeDoVerde.Repository.Migrations
 {
     [DbContext(typeof(RedeDoVerdeContext))]
-    partial class RedeDoVerdeContextModelSnapshot : ModelSnapshot
+    [Migration("20200911124020_UpdateModelAccount")]
+    partial class UpdateModelAccount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

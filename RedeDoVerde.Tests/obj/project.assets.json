@@ -5629,11 +5629,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Tests\\RedeDoVerde.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Tests\\RedeDoVerde.Tests.csproj",
       "projectName": "RedeDoVerde.Tests",
-      "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Tests\\RedeDoVerde.Tests.csproj",
+      "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Tests\\RedeDoVerde.Tests.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Tests\\obj\\",
+      "outputPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

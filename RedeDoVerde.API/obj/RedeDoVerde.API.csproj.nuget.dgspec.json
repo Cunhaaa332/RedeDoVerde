@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.API\\RedeDoVerde.API.csproj": {}
+    "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.API\\RedeDoVerde.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.API\\RedeDoVerde.API.csproj": {
+    "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.API\\RedeDoVerde.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.API\\RedeDoVerde.API.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.API\\RedeDoVerde.API.csproj",
         "projectName": "RedeDoVerde.API",
-        "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.API\\RedeDoVerde.API.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.API\\RedeDoVerde.API.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.API\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -32,8 +32,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Services\\RedeDoVerde.Services.csproj": {
-                "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Services\\RedeDoVerde.Services.csproj"
+              "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Services\\RedeDoVerde.Services.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Services\\RedeDoVerde.Services.csproj"
               }
             }
           }
@@ -49,21 +49,21 @@
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -100,14 +100,14 @@
         }
       }
     },
-    "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj": {
+    "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj",
         "projectName": "RedeDoVerde.CrossCutting",
-        "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -157,14 +157,14 @@
         }
       }
     },
-    "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj": {
+    "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj",
         "projectName": "RedeDoVerde.Domain",
-        "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -198,11 +198,11 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             }
           },
           "imports": [
@@ -224,14 +224,14 @@
         }
       }
     },
-    "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Repository\\RedeDoVerde.Repository.csproj": {
+    "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Repository\\RedeDoVerde.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Repository\\RedeDoVerde.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Repository\\RedeDoVerde.Repository.csproj",
         "projectName": "RedeDoVerde.Repository",
-        "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Repository\\RedeDoVerde.Repository.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Repository\\RedeDoVerde.Repository.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Repository\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -252,11 +252,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj": {
-                "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj"
+              "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj"
               },
-              "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj"
+              "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj"
               }
             }
           }
@@ -272,19 +272,25 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             },
             "Microsoft.Extensions.Logging.Console": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             }
           },
           "imports": [
@@ -306,14 +312,14 @@
         }
       }
     },
-    "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Services\\RedeDoVerde.Services.csproj": {
+    "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Services\\RedeDoVerde.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Services\\RedeDoVerde.Services.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Services\\RedeDoVerde.Services.csproj",
         "projectName": "RedeDoVerde.Services",
-        "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Services\\RedeDoVerde.Services.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Services\\RedeDoVerde.Services.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Services\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -334,11 +340,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj"
+              "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj"
               },
-              "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Repository\\RedeDoVerde.Repository.csproj": {
-                "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Repository\\RedeDoVerde.Repository.csproj"
+              "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Repository\\RedeDoVerde.Repository.csproj": {
+                "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Repository\\RedeDoVerde.Repository.csproj"
               }
             }
           }
@@ -355,6 +361,10 @@
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.4, )"
             }
           },
           "imports": [

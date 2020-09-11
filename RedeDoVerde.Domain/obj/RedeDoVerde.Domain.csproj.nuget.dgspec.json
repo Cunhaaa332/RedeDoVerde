@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj": {}
+    "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj": {
+    "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj",
         "projectName": "RedeDoVerde.Domain",
-        "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\RedeDoVerde.Domain.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.Domain\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -45,11 +45,11 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[3.1.8, )"
             }
           },
           "imports": [

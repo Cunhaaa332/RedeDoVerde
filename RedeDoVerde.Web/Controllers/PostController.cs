@@ -23,7 +23,7 @@ namespace RedeDoVerde.Web.Controllers
         {
             _accountRepository = accountRepository;
         }
-
+        
 
         // GET: PostsController
         public ActionResult Index()
@@ -102,8 +102,9 @@ namespace RedeDoVerde.Web.Controllers
                 var client = new RestClient();
                 var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
                 request.AddJsonBody(model);
+                var key = HttpContext.Session.GetString("Token");
 
-                var response = client.Put<Post>(request);
+                var response = client.Put<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
                 return Redirect("/");
             }
@@ -128,8 +129,9 @@ namespace RedeDoVerde.Web.Controllers
             {
                 var client = new RestClient();
                 var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
+                var key = HttpContext.Session.GetString("Token");
 
-                var response = client.Delete<Post>(request);
+                var response = client.Delete<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
                 return Redirect("/");
             }
