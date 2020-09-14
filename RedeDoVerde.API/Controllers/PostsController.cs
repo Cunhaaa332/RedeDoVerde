@@ -84,6 +84,7 @@ namespace RedeDoVerde.API.Controllers
         [HttpPost]
         public async Task<ActionResult<Post>> PostPost(Post post)
         {
+            post.Account =  _context.Accounts.FirstOrDefault(x => x.Id == post.Account.Id);
             _context.Posts.Add(post);
             await _context.SaveChangesAsync();
 

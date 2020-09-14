@@ -34,6 +34,7 @@ namespace RedeDoVerde.Repository.Context
         {
             modelBuilder.ApplyConfiguration(new AccountMap());
             modelBuilder.ApplyConfiguration(new RoleMap());
+            modelBuilder.ApplyConfiguration(new PostMap());
 
             base.OnModelCreating(modelBuilder);
         }
