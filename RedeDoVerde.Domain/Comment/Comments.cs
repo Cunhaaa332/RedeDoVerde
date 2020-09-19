@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RedeDoVerde.Domain.Comment
 {
-    public class Comment
+    public class Comments
     {
         public Guid Id { get; set; }
         public string Content { get; set; }

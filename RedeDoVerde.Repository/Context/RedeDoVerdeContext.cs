@@ -14,7 +14,7 @@ namespace RedeDoVerde.Repository.Context
         public DbSet<Domain.Account.Account> Accounts { get; set; }
         public DbSet<Domain.Account.Role> Profiles { get; set; }
         public DbSet<Domain.Post.Post> Posts { get; set; }
-        public DbSet<Domain.Comment.Comment> Comments { get; set; }
+        public DbSet<Domain.Comment.Comments> Comments { get; set; }
 
         public static readonly ILoggerFactory _loggerFactory = 
             LoggerFactory.Create(builder => { builder.AddConsole(); });
@@ -35,6 +35,7 @@ namespace RedeDoVerde.Repository.Context
             modelBuilder.ApplyConfiguration(new AccountMap());
             modelBuilder.ApplyConfiguration(new RoleMap());
             modelBuilder.ApplyConfiguration(new PostMap());
+            modelBuilder.ApplyConfiguration(new CommentMap());
 
             base.OnModelCreating(modelBuilder);
         }

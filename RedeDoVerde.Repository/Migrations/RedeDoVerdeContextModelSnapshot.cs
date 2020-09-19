@@ -69,7 +69,7 @@ namespace RedeDoVerde.Repository.Migrations
                     b.ToTable("Role");
                 });
 
-            modelBuilder.Entity("RedeDoVerde.Domain.Comment.Comment", b =>
+            modelBuilder.Entity("RedeDoVerde.Domain.Comment.Comments", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -79,7 +79,9 @@ namespace RedeDoVerde.Repository.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
 
                     b.Property<Guid?>("PostId")
                         .HasColumnType("uniqueidentifier");
@@ -90,7 +92,7 @@ namespace RedeDoVerde.Repository.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("RedeDoVerde.Domain.Post.Post", b =>
@@ -125,10 +127,10 @@ namespace RedeDoVerde.Repository.Migrations
                         .HasForeignKey("RoleId");
                 });
 
-            modelBuilder.Entity("RedeDoVerde.Domain.Comment.Comment", b =>
+            modelBuilder.Entity("RedeDoVerde.Domain.Comment.Comments", b =>
                 {
                     b.HasOne("RedeDoVerde.Domain.Account.Account", "Account")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("AccountId");
 
                     b.HasOne("RedeDoVerde.Domain.Post.Post", "Post")

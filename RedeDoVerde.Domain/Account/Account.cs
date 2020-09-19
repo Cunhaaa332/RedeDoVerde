@@ -16,5 +16,8 @@ namespace RedeDoVerde.Domain.Account
         public Role Role { get; set; }
 
         public List<Post.Post> Posts { get; set; }
+
+        [JsonIgnore]
+        public List<Comment.Comments> Comments{ get; set; }
     }
 }

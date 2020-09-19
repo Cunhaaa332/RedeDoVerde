@@ -38,9 +38,15 @@ namespace RedeDoVerde.Web.Controllers
         }
 
         // GET: PostsController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(Guid id)
         {
-            return View();
+            var client = new RestClient();
+            var key = HttpContext.Session.GetString("Token");
+
+            var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
+            var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+            return View(response.Data);
         }
 
         // GET: PostsController/Create
@@ -89,7 +95,13 @@ namespace RedeDoVerde.Web.Controllers
         // GET: PostsController/Edit/5
         public ActionResult Edit(Guid id)
         {
-            return View();
+            var client = new RestClient();
+            var key = HttpContext.Session.GetString("Token");
+
+            var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
+            var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+            return View(response.Data);
         }
 
         // POST: PostsController/Edit/5
@@ -117,7 +129,13 @@ namespace RedeDoVerde.Web.Controllers
         // GET: PostsController/Delete/5
         public ActionResult Delete(Guid id)
         {
-            return View();
+            var client = new RestClient();
+            var key = HttpContext.Session.GetString("Token");
+
+            var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
+            var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+            return View(response.Data);
         }
 
         // POST: PostsController/Delete/5
