@@ -34,16 +34,18 @@ namespace RedeDoVerde.API.Controllers
 
         // GET: api/Posts/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Post>> GetPost(Guid id)
+        public async Task<ActionResult<PostResponse>> GetPost(Guid id)
         {
-            var post = await _context.Posts.FindAsync(id);
+            var post = await _context.Posts.Include(x => x.Comments).FirstOrDefaultAsync(x => x.Id == id);
+
+            var postResponse = new PostResponse { Id = post.Id, Account = post.Account, Comments = post.Comments, Content = post.Content, ImagePost = post.ImagePost };
 
             if (post == null)
             {
                 return NotFound();
             }
 
-            return post;
+            return postResponse;
         }
 
         // PUT: api/Posts/5

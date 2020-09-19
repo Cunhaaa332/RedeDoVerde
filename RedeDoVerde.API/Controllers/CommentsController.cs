@@ -11,7 +11,7 @@ using RedeDoVerde.Repository.Context;
 
 namespace RedeDoVerde.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Comments")]
     [ApiController]
     [Authorize]
     public class CommentsController : ControllerBase
@@ -27,14 +27,14 @@ namespace RedeDoVerde.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Comments>>> GetComments()
         {
-            return await _context.Comments.ToListAsync();
+            return await _context.Comments.Include(x => x.Account).ToListAsync();
         }
 
         // GET: api/Comments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Comments>> GetComment(Guid id)
         {
-            var comment = await _context.Comments.FindAsync(id);
+            var comment = await _context.Comments.Include(x => x.Account).Include(x => x.Post).FirstOrDefaultAsync(x => x.Id == id);
 
             if (comment == null)
             {

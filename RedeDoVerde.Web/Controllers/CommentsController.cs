@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Policy;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -38,7 +39,13 @@ namespace RedeDoVerde.Web.Controllers
         // GET: CommentsController/Details/5
         public ActionResult Details(Guid id)
         {
-            return View();
+            var client = new RestClient();
+            var key = HttpContext.Session.GetString("Token");
+
+            var request = new RestRequest("https://localhost:44386/api/comments/" + id, DataFormat.Json);
+            var response = client.Get<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+            return View(response.Data);
         }
 
         // GET: CommentsController/Create
@@ -57,7 +64,7 @@ namespace RedeDoVerde.Web.Controllers
                 if (ModelState.IsValid)
                 {
                     var client = new RestClient();
-                    var requestPost = new RestRequest("https://localhost:44386/api/posts/0f459171-d598-4cf0-17a2-08d84e98c6cf", DataFormat.Json);
+                    var requestPost = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
                     var key = HttpContext.Session.GetString("Token");
                     
                     var responsePost = client.Get<Post>(requestPost.AddHeader("Authorization", "Bearer " + KeyValue(key))); 
@@ -92,17 +99,30 @@ namespace RedeDoVerde.Web.Controllers
         // GET: CommentsController/Edit/5
         public ActionResult Edit(Guid id)
         {
-            return View();
+            var client = new RestClient();
+            var key = HttpContext.Session.GetString("Token");
+
+            var request = new RestRequest("https://localhost:44386/api/comments/" + id, DataFormat.Json);
+            var response = client.Get<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+            return View(response.Data);
         }
 
         // POST: CommentsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Guid id, Comments comment)
+        public ActionResult Edit(Guid id, Comments model)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var client = new RestClient();
+                var request = new RestRequest("https://localhost:44386/api/comments/" + id, DataFormat.Json);
+                request.AddJsonBody(model);
+                var key = HttpContext.Session.GetString("Token");
+
+                var response = client.Put<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+                return Redirect("/");
             }
             catch
             {
@@ -113,7 +133,13 @@ namespace RedeDoVerde.Web.Controllers
         // GET: CommentsController/Delete/5
         public ActionResult Delete(Guid id)
         {
-            return View();
+            var client = new RestClient();
+            var key = HttpContext.Session.GetString("Token");
+
+            var request = new RestRequest("https://localhost:44386/api/comments/" + id, DataFormat.Json);
+            var response = client.Get<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+            return View(response.Data);
         }
 
         // POST: CommentsController/Delete/5
@@ -123,7 +149,13 @@ namespace RedeDoVerde.Web.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var client = new RestClient();
+                var request = new RestRequest("https://localhost:44386/api/comments/" + id, DataFormat.Json);
+                var key = HttpContext.Session.GetString("Token");
+
+                var response = client.Delete<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+                return Redirect("/");
             }
             catch
             {

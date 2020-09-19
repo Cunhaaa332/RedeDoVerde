@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RedeDoVerde.Domain.Account.Repository;
+using RedeDoVerde.Domain.Comment;
 using RedeDoVerde.Domain.Post;
 using RedeDoVerde.Repository.Account;
 using RestSharp;
@@ -23,7 +24,7 @@ namespace RedeDoVerde.Web.Controllers
         {
             _accountRepository = accountRepository;
         }
-        
+
 
         // GET: PostsController
         public ActionResult Index()
@@ -44,7 +45,25 @@ namespace RedeDoVerde.Web.Controllers
             var key = HttpContext.Session.GetString("Token");
 
             var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
-            var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var response = client.Get<PostResponse>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+            var requestComments = new RestRequest("https://localhost:44386/api/comments/", DataFormat.Json);
+            var responseComments = client.Get<List<Comments>>(requestComments.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+            List<Comments> listaComments = new List<Comments>();
+
+            foreach (var item in responseComments.Data)
+            {
+                foreach (var item5 in response.Data.Comments)
+                {
+                    if (item.Id == item5.Id)
+                    {
+                        listaComments.Add(item);
+                    }
+                }
+            }
+
+            ViewBag.Comments = listaComments;
 
             return View(response.Data);
         }
@@ -62,7 +81,7 @@ namespace RedeDoVerde.Web.Controllers
         {
             try
             {
-                if(ModelState.IsValid)
+                if (ModelState.IsValid)
                 {
                     var client = new RestClient();
                     var request = new RestRequest("https://localhost:44386/api/posts", DataFormat.Json);
@@ -159,7 +178,7 @@ namespace RedeDoVerde.Web.Controllers
             }
         }
 
-        public string KeyValue(string key) 
+        public string KeyValue(string key)
         {
             string[] peloAmorDeDeusFunciona = key.Split(":");
             string[] agrVai = peloAmorDeDeusFunciona[1].Split("\\");
@@ -167,6 +186,6 @@ namespace RedeDoVerde.Web.Controllers
             string[] agrVaiPF2 = agrVaiPF[0].Split('"');
 
             return agrVaiPF2[1];
-        } 
+        }
     }
 }

@@ -535,3 +535,6 @@ C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcor
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.genruntimeconfig.cache
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Comments\Index.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Comments\Create.cshtml.g.cs
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Comments\Edit.cshtml.g.cs
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Comments\Delete.cshtml.g.cs
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Comments\Details.cshtml.g.cs
