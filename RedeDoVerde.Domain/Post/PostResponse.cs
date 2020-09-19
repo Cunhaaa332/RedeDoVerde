@@ -10,7 +10,7 @@ namespace RedeDoVerde.Domain.Post
         public Guid Id { get; set; }
         public string Content { get; set; }
         public string ImagePost { get; set; }
-        public Account.Account Account { get; set; }
+        public Account.AccountResponse Account { get; set; }
 
         public List<Comment.Comments> Comments { get; set; }
 
