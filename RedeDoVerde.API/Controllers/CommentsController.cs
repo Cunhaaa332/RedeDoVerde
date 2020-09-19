@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RedeDoVerde.Domain.Account;
 using RedeDoVerde.Domain.Comment;
+using RedeDoVerde.Domain.Post;
 using RedeDoVerde.Repository.Context;
 
 namespace RedeDoVerde.API.Controllers
@@ -39,7 +40,9 @@ namespace RedeDoVerde.API.Controllers
 
             var accountResponse = new AccountResponse { Id = comment.Account.Id, Name = comment.Account.Name };
 
-            var commentResponse = new CommentsResponse { Id = comment.Id, Account = accountResponse, Content = comment.Content};
+            var postViewModel = new PostViewModel { Id = comment.Post.Id };
+
+            var commentResponse = new CommentsResponse { Id = comment.Id, Account = accountResponse, Content = comment.Content, Post = postViewModel};
 
             if (comment == null)
             {

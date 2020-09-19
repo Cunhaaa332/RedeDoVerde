@@ -9,5 +9,6 @@ namespace RedeDoVerde.Domain.Comment
         public Guid Id { get; set; }
         public string Content { get; set; }
         public Account.AccountResponse Account { get; set; }
+        public Post.PostViewModel Post { get; set; }
     }
 }

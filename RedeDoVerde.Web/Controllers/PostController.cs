@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -130,12 +131,17 @@ namespace RedeDoVerde.Web.Controllers
         {
             try
             {
-                var client = new RestClient();
-                var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
-                request.AddJsonBody(model);
-                var key = HttpContext.Session.GetString("Token");
+                if (ModelState.IsValid)
+                {
+                    var client = new RestClient();
+                    var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
+                    request.AddJsonBody(model);
+                    var key = HttpContext.Session.GetString("Token");
 
-                var response = client.Put<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                    var response = client.Put<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+                    return Redirect("/");
+                }
 
                 return Redirect("/");
             }

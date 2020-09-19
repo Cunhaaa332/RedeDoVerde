@@ -517,7 +517,6 @@ C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcor
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Create.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Delete.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Details.cshtml.g.cs
-C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Edit.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Index.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -538,3 +537,4 @@ C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcor
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Comments\Edit.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Comments\Delete.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Comments\Details.cshtml.g.cs
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Edit.cshtml.g.cs
