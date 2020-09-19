@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using RedeDoVerde.Domain.Account;
 using RedeDoVerde.Domain.Comment;
 using RedeDoVerde.Repository.Context;
 
@@ -32,16 +33,20 @@ namespace RedeDoVerde.API.Controllers
 
         // GET: api/Comments/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Comments>> GetComment(Guid id)
+        public async Task<ActionResult<CommentsResponse>> GetComment(Guid id)
         {
             var comment = await _context.Comments.Include(x => x.Account).Include(x => x.Post).FirstOrDefaultAsync(x => x.Id == id);
+
+            var accountResponse = new AccountResponse { Id = comment.Account.Id, Name = comment.Account.Name };
+
+            var commentResponse = new CommentsResponse { Id = comment.Id, Account = accountResponse, Content = comment.Content};
 
             if (comment == null)
             {
                 return NotFound();
             }
 
-            return comment;
+            return commentResponse;
         }
 
         // PUT: api/Comments/5
@@ -84,6 +89,7 @@ namespace RedeDoVerde.API.Controllers
         {
             comment.Account = _context.Accounts.FirstOrDefault(x => x.Id == comment.Account.Id);
             comment.Post = _context.Posts.FirstOrDefault(x => x.Id == comment.Post.Id);
+            comment.Id = Guid.Empty;
             _context.Comments.Add(comment);
             await _context.SaveChangesAsync();
 

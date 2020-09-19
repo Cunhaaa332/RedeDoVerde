@@ -44,17 +44,17 @@
                             @comments.Content
                         </td>
                         @if (comments.Account.Email == User.Identity.Name)
-                            {
-                                <td>
-                                    <a asp-controller="Comments" asp-action="Details" asp-route-id="@comments.Id">Details</a> |
-                                    <a asp-controller="Comments" asp-action="Edit" asp-route-id="@comments.Id">Edit</a> |
-                                    <a asp-controller="Comments" asp-action="Delete" asp-route-id="@comments.Id">Delete</a>
-                                </td>
-                            }
-                            else
-                            {
-                                <td><a asp-action="Details" asp-route-id="@comments.Id">Details</a></td>
-                            }
+                        {
+                            <td>
+                                <a asp-controller="Comments" asp-action="Details" asp-route-id="@comments.Id">Details</a> |
+                                <a asp-controller="Comments" asp-action="Edit" asp-route-id="@comments.Id">Edit</a> |
+                                <a asp-controller="Comments" asp-action="Delete" asp-route-id="@comments.Id">Delete</a>
+                            </td>
+                        }
+                        else
+                        {
+                            <td><a asp-controller="Comments" asp-action="Details" asp-route-id="@comments.Id">Details</a></td>
+                        }
                     </tr>
                 }
             </tbody>
