@@ -11,8 +11,12 @@ using Newtonsoft.Json;
 using RedeDoVerde.Domain.Account.Repository;
 using RedeDoVerde.Domain.Comment;
 using RedeDoVerde.Domain.Post;
+using RedeDoVerde.Web.ViewModel.Post;
 using RedeDoVerde.Repository.Account;
 using RestSharp;
+using Microsoft.Azure.Storage;
+using Microsoft.Azure.Storage.Blob;
+using RedeDoVerde.Repository.Context;
 
 namespace RedeDoVerde.Web.Controllers
 {
@@ -21,9 +25,12 @@ namespace RedeDoVerde.Web.Controllers
 
         private readonly IAccountRepository _accountRepository;
 
-        public PostController(IAccountRepository accountRepository)
+        private readonly RedeDoVerdeContext _redeDoVerdeContext;
+
+        public PostController(IAccountRepository accountRepository, RedeDoVerdeContext redeDoVerdeContext)
         {
             _accountRepository = accountRepository;
+            _redeDoVerdeContext = redeDoVerdeContext;
         }
 
 
@@ -78,7 +85,7 @@ namespace RedeDoVerde.Web.Controllers
         // POST: PostsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Post model)
+        public ActionResult Create(PostViewModels model)
         {
             try
             {
@@ -96,6 +103,8 @@ namespace RedeDoVerde.Web.Controllers
                     CancellationToken cancellationToken;
 
                     var account = _accountRepository.FindByIdAsync(token.Subject, cancellationToken);
+
+                    model.ImagePost = UploadFotoPost(model.Foto).Result;
 
                     model.Account = account.Result;
 
@@ -119,7 +128,7 @@ namespace RedeDoVerde.Web.Controllers
             var key = HttpContext.Session.GetString("Token");
 
             var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
-            var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var response = client.Get<PostViewModels>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
             return View(response.Data);
         }
@@ -127,7 +136,7 @@ namespace RedeDoVerde.Web.Controllers
         // POST: PostsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Guid id, Post model)
+        public ActionResult Edit(Guid id, PostViewModels model)
         {
             try
             {
@@ -135,6 +144,9 @@ namespace RedeDoVerde.Web.Controllers
                 {
                     var client = new RestClient();
                     var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
+
+                    model.ImagePost = UploadFotoPost(model.Foto).Result;
+
                     request.AddJsonBody(model);
                     var key = HttpContext.Session.GetString("Token");
 
@@ -166,16 +178,41 @@ namespace RedeDoVerde.Web.Controllers
         // POST: PostsController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(Guid id, IFormCollection collection)
+        public ActionResult Delete(Guid id, Post post)
         {
             try
             {
                 var client = new RestClient();
-                var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
+
                 var key = HttpContext.Session.GetString("Token");
+                var request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
+                var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
-                var response = client.Delete<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                post = response.Data;
 
+                using (var transaction = _redeDoVerdeContext.Database.BeginTransaction())
+                {
+                    try
+                    {
+
+                        foreach (var item in post.Comments)
+                        {
+                            var requestComments = new RestRequest("https://localhost:44386/api/comments/" + item.Id, DataFormat.Json);
+
+                            var responseComments = client.Delete<Comments>(requestComments.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                        }
+
+                        request = new RestRequest("https://localhost:44386/api/posts/" + id, DataFormat.Json);
+
+                        response = client.Delete<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+
+                        transaction.Commit();
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                    }
+                }
                 return Redirect("/");
             }
             catch
@@ -192,6 +229,19 @@ namespace RedeDoVerde.Web.Controllers
             string[] agrVaiPF2 = agrVaiPF[0].Split('"');
 
             return agrVaiPF2[1];
+        }
+
+        private async Task<string> UploadFotoPost(IFormFile foto)
+        {
+            var reader = foto.OpenReadStream();
+            var cloudStorageAccount = CloudStorageAccount.Parse(@"DefaultEndpointsProtocol=https;AccountName=rededoverde;AccountKey=oH7xs4PjhRfZjGs9n75R9WKWVNyl+ptlmZZk8h46DtQswGR/XeoVQMnk7dhBHJxwOsXDp5UuNZLR5rkbb5Ibkw==;EndpointSuffix=core.windows.net");
+            var blobClient = cloudStorageAccount.CreateCloudBlobClient();
+            var container = blobClient.GetContainerReference("fotos-post");
+            await container.CreateIfNotExistsAsync();
+            var blob = container.GetBlockBlobReference(Guid.NewGuid().ToString());
+            await blob.UploadFromStreamAsync(reader);
+            var destinoDaImagemNaNuvem = blob.Uri.ToString();
+            return destinoDaImagemNaNuvem;
         }
     }
 }

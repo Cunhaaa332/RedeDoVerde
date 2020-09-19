@@ -1,25 +1,26 @@
-﻿@model RedeDoVerde.Domain.Post.Post
+﻿@model RedeDoVerde.Web.ViewModel.Post.PostViewModels
 
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>Create</h1>
 
+<h4>PostViewModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="All" class="text-danger"></div>
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Content" class="control-label"></label>
                 <input asp-for="Content" class="form-control" />
                 <span asp-validation-for="Content" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImagePost" class="control-label"></label>
-                <input asp-for="ImagePost" type="file" class="form-control" />
-                <span asp-validation-for="ImagePost" class="text-danger"></span>
+                <label for="Foto" class="control-label"></label>
+                <input type="file" name="Foto" class="form-control" accept="image/png, .jpeg, .jpg" />
+                <span validation-for="Foto" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -29,6 +30,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to home</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 

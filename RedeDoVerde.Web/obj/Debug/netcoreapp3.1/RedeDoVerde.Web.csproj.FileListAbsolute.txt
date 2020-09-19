@@ -501,9 +501,6 @@ C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\bin\Debug\netcor
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.csprojAssemblyReference.cache
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.AssemblyInfoInputs.cache
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.AssemblyInfo.cs
-C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.RazorAssemblyInfo.cache
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.RazorAssemblyInfo.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.TagHelpers.input.cache
@@ -514,7 +511,6 @@ C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcor
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Create.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Delete.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Details.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Index.cshtml.g.cs
@@ -538,3 +534,10 @@ C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcor
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Comments\Delete.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Comments\Details.cshtml.g.cs
 C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Edit.cshtml.g.cs
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Create.cshtml.g.cs
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\bin\Debug\netcoreapp3.1\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\bin\Debug\netcoreapp3.1\Microsoft.Azure.Storage.Blob.dll
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\bin\Debug\netcoreapp3.1\Microsoft.Azure.Storage.Common.dll
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\source\repos\Vamosver\RedeDoVerde\RedeDoVerde.Web\obj\Debug\netcoreapp3.1\RedeDoVerde.Web.MvcApplicationPartsAssemblyInfo.cache
