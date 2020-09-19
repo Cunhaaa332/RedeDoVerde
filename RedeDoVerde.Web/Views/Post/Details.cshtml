@@ -1,0 +1,67 @@
+﻿@model RedeDoVerde.Domain.Post.PostResponse
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ImagePost)
+        </dt>
+        <dd class="col-sm-10">
+            <img style="max-height: 150px; max-width: 150px;" src="@Model.ImagePost" />
+        </dd>
+        <dt></dt>
+        <dd>
+            <hr />
+            <a asp-controller="Comments" asp-action="Create" asp-route-id="@Model.Id">Create new comment</a>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Comentário
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var comments in ViewBag.Comments)
+                    {
+                        <tr>
+                            <td>
+                                @comments.Content
+                            </td>
+                            @if (comments.Account.Email == User.Identity.Name)
+                            {
+                                <td>
+                                    <a asp-controller="Comments" asp-action="Details" asp-route-id="@comments.Id">Details</a> |
+                                    <a asp-controller="Comments" asp-action="Edit" asp-route-id="@comments.Id">Edit</a> |
+                                    <a asp-controller="Comments" asp-action="Delete" asp-route-id="@comments.Id">Delete</a>
+                                </td>
+                            }
+                            else
+                            {
+                                <td><a asp-controller="Comments" asp-action="Details" asp-route-id="@comments.Id">Details</a></td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

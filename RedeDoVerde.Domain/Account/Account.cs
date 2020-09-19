@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace RedeDoVerde.Domain.Account
 {
@@ -14,5 +15,9 @@ namespace RedeDoVerde.Domain.Account
         public string Password { get; set; }
         public Role Role { get; set; }
 
+        public List<Post.Post> Posts { get; set; }
+
+        [JsonIgnore]
+        public List<Comment.Comments> Comments{ get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace RedeDoVerde.Repository.Mapping
             builder.Property(x => x.ImagePost).HasMaxLength(250);
 
             builder.HasMany(x => x.Comments).WithOne(c => c.Post);
-            builder.HasOne(x => x.Account);
+            builder.HasOne(x => x.Account).WithMany(x => x.Posts);
         }
     }
 }

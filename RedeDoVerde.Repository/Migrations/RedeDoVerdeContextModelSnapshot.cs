@@ -15,7 +15,7 @@ namespace RedeDoVerde.Repository.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.7")
+                .HasAnnotation("ProductVersion", "3.1.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -69,7 +69,7 @@ namespace RedeDoVerde.Repository.Migrations
                     b.ToTable("Role");
                 });
 
-            modelBuilder.Entity("RedeDoVerde.Domain.Comment.Comment", b =>
+            modelBuilder.Entity("RedeDoVerde.Domain.Comment.Comments", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -79,7 +79,9 @@ namespace RedeDoVerde.Repository.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
 
                     b.Property<Guid?>("PostId")
                         .HasColumnType("uniqueidentifier");
@@ -90,7 +92,7 @@ namespace RedeDoVerde.Repository.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("RedeDoVerde.Domain.Post.Post", b =>
@@ -103,16 +105,19 @@ namespace RedeDoVerde.Repository.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
 
                     b.Property<string>("ImagePost")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
 
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Post");
                 });
 
             modelBuilder.Entity("RedeDoVerde.Domain.Account.Account", b =>
@@ -122,10 +127,10 @@ namespace RedeDoVerde.Repository.Migrations
                         .HasForeignKey("RoleId");
                 });
 
-            modelBuilder.Entity("RedeDoVerde.Domain.Comment.Comment", b =>
+            modelBuilder.Entity("RedeDoVerde.Domain.Comment.Comments", b =>
                 {
                     b.HasOne("RedeDoVerde.Domain.Account.Account", "Account")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("AccountId");
 
                     b.HasOne("RedeDoVerde.Domain.Post.Post", "Post")
@@ -136,7 +141,7 @@ namespace RedeDoVerde.Repository.Migrations
             modelBuilder.Entity("RedeDoVerde.Domain.Post.Post", b =>
                 {
                     b.HasOne("RedeDoVerde.Domain.Account.Account", "Account")
-                        .WithMany()
+                        .WithMany("Posts")
                         .HasForeignKey("AccountId");
                 });
 #pragma warning restore 612, 618

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj": {}
+    "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj": {
+    "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj",
         "projectName": "RedeDoVerde.CrossCutting",
-        "projectPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\RedeDoVerde.CrossCutting.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\RedeDoVerde\\RedeDoVerde\\RedeDoVerde.CrossCutting\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\Vamosver\\RedeDoVerde\\RedeDoVerde.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
